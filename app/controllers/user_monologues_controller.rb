@@ -1,0 +1,2 @@
+class UserMonologuesController < ApplicationController
+end
