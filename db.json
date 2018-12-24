@@ -7,8 +7,9 @@
       "genre": "Tragedy",
       "age": 30,
       "play": "Macbeth",
-      "length": "0 minutes 4 seconds",
-      "script": "She should have died hereafter; There would have been a time for such a word. To-morrow, and to-morrow, and to-morrow, Creeps in this petty pace from day to day To the last syllable of recorded time, And all our yesterdays have lighted fools The way to dusty death. Out, out, brief candle! Life's but a walking shadow, a poor player That struts and frets his hour upon the stage And then is heard no more: it is a tale Told by an idiot, full of sound and fury, Signifying nothing."
+      "length": "0 minutes 5 seconds",
+      "script": "She should have died hereafter; There would have been a time for such a word. To-morrow, and to-morrow, and to-morrow, Creeps in this petty pace from day to day To the last syllable of recorded time, And all our yesterdays have lighted fools The way to dusty death. Out, out, brief candle! Life's but a walking shadow, a poor player That struts and frets his hour upon the stage And then is heard no more: it is a tale Told by an idiot, full of sound and fury, Signifying nothing.",
+      "clicked": false
     },
     {
       "id": 2,
@@ -69,15 +70,6 @@
       "genre": "comedy",
       "script": "is this working now",
       "clicked": false
-    },
-    {
-      "character": "Chloe",
-      "play": "Is My Girlfriend",
-      "age": "25",
-      "genre": "Romantic Comedy",
-      "length": "100 minutes",
-      "script": "*giggles full of love*",
-      "id": 8
     }
   ]
 }
