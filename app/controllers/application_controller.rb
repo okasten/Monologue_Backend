@@ -4,7 +4,8 @@ class ApplicationController < ActionController::API
   end
 
   def decode_token
-    JWT.decode(get_token, 'SECRET')[0]
+   JWT.decode(get_token, 'SECRET')[0]
+
   end
 
   def get_token
@@ -12,8 +13,8 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    User.find(decode_token["user_id"])
 
+    User.find(decode_token["user_id"])
   end
 
   def logged_in
