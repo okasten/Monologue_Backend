@@ -16,3 +16,4 @@ script: "She should have died hereafter; There would have been a time for such a
 notes: "learn it better")
 
 user1 = User.create(name: "Olivia", email: "odkasten@gmail.com", password: "password", username: "olivia")
+um1 = UserMonologue.create(user_id: 1, monologue_id: 1)

@@ -1,6 +1,7 @@
 class Api::V1::AuthController < ApplicationController
-
+  
   def create
+    byebug
     user = User.find_by(username: login_user_params[:username])
     if user && user.authenticate(login_user_params[:password])
       token = JWT.encode({user_id: user.id}, 'SECRET')
@@ -21,7 +22,7 @@ class Api::V1::AuthController < ApplicationController
 private
 
  def login_user_params
-   params.require(:user).permit(:username, :password)
+   params.require(:user).permit(:username, :password, :current_user)
  end
 
 

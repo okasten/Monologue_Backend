@@ -13,7 +13,6 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-
     User.find(decode_token["user_id"])
   end
 
