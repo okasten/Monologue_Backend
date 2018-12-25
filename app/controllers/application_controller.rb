@@ -4,11 +4,13 @@ class ApplicationController < ActionController::API
   end
 
   def decode_token
+    byebug
    JWT.decode(get_token, 'SECRET')[0]
 
   end
 
   def get_token
+
     request.authorization
   end
 
