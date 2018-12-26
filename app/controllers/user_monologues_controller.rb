@@ -1,2 +1,2 @@
-class UserMonologuesController < ApplicationController
+class UsermonologuesController < ApplicationController
 end

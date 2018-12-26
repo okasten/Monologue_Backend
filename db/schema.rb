@@ -29,11 +29,13 @@ ActiveRecord::Schema.define(version: 2018_12_11_194852) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_monologues", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "monologue_id"
+  create_table "usermonologues", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "monologue_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["monologue_id"], name: "index_usermonologues_on_monologue_id"
+    t.index ["user_id"], name: "index_usermonologues_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
