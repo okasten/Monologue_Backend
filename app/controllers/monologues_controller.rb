@@ -10,6 +10,14 @@ class MonologuesController < ApplicationController
     render json: @monologue
   end
 
+  def update
+    @monologue = Monologue.find(destroy_params[:id])
+
+    @monologue.update(mon_params)
+    byebug
+    render json: @monologue
+  end
+
   def destroy
     @monologue = Monologue.find(destroy_params[:id])
     @monologue.destroy!
