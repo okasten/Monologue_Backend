@@ -1,5 +1,7 @@
-class MonologuesController < ApplicationController
+class Api::V1::MonologuesController < ApplicationController
+  before_action :find_user
   skip_before_action :authorized
+
   def index
     @monologues = Monologue.all
     render json: @monologues
@@ -14,7 +16,6 @@ class MonologuesController < ApplicationController
     @monologue = Monologue.find(destroy_params[:id])
 
     @monologue.update(mon_params)
-    byebug
     render json: @monologue
   end
 
@@ -31,5 +32,9 @@ class MonologuesController < ApplicationController
 
   def destroy_params
     params.permit(:id)
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 end
