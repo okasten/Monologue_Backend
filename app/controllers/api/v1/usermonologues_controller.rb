@@ -22,7 +22,6 @@ class Api::V1::UsermonologuesController < ApplicationController
   end
 
   def destroy
-    byebug
     @monologue = Monologue.find(destroy_params[:id])
     @monologue.destroy!
   end
