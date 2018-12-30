@@ -1,22 +1,22 @@
-class Api::V1::MonologuesController < ApplicationController
+class Api::V1::UsermonologuesController < ApplicationController
   before_action :find_user
   skip_before_action :authorized
 
   def index
     @monologues = @user.monologues
+
     render json: @monologues
   end
 
   def create
     @mon = Monologue.create(mon_params)
     @monologue = Usermonologue.create(monologue_id: @mon.id, user_id: @user.id)
-    byebug
-    render json: @monologue
+
+    render json: @mon
   end
 
   def update
-    @monologue = Usermonologue.find(monologue_id: destroy_params[:id], user_id: @user.id)
-
+    @monologue = Monologue.find(destroy_params[:id])
     @monologue.update(mon_params)
     render json: @monologue
   end

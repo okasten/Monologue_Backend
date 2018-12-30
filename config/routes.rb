@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :user_monologues
+
 
 
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create] do
         resources :monologues
+        resources :usermonologues
       end
 
       get '/profile', to: "users#profile"
