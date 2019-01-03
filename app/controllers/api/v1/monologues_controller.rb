@@ -16,7 +16,7 @@ class Api::V1::MonologuesController < ApplicationController
 
   def update
     @monologue = Usermonologue.find(monologue_id: destroy_params[:id], user_id: @user.id)
-
+    byebug
     @monologue.update(mon_params)
     render json: @monologue
   end
@@ -30,7 +30,7 @@ class Api::V1::MonologuesController < ApplicationController
   private
 
   def mon_params
-    params.permit(:character, :play, :script, :length, :age, :genre, :file)
+    params.permit(:character, :play, :script, :length, :age, :genre, :file, :notes)
   end
 
   def destroy_params
